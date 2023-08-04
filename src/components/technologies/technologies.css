@@ -1,0 +1,11 @@
+.technologies{
+    display: flex;
+    margin: 15px 0;
+    gap: 10px;
+}
+
+.technologies>img{
+    width: 8%;
+    object-fit: contain;
+    border-radius: 0.4rem;
+}
