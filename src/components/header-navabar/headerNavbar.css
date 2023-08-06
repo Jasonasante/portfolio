@@ -1,37 +1,38 @@
 :root {
-    --color-bg:rgb(15, 15, 15);
+    --color-bg: rgb(15, 15, 15);
     --color-bg-variant: #2c2c6c;
     --color-primary: rgb(171, 249, 55);
-    --color-primary-variant: rgba(189, 252, 94,0.8);
+    --color-primary-variant: rgba(189, 252, 94, 0.8);
     --color-white: #fff;
     --color-light: rgba(255, 255, 255, 0.6);
-    --container-width-lg:75%;
-    --container-width-md:86%;
-    --container-width-sm:90%;
-    --transition:all 400ms ease;
-  }
+    --container-width-lg: 75%;
+    --container-width-md: 86%;
+    --container-width-sm: 90%;
+    --transition: all 400ms ease;
+}
 
-.top-navbar{
+.top-navbar {
     width: 100%;
     background-color: var(--color-bg);
     display: flex;
     justify-content: flex-end;
     align-items: center;
     padding: 10px;
-    margin-bottom: 100px ;
+    margin-bottom: 80px;
+    /* position: fixed; */
 }
 
-.top-navbar-links{
+.top-navbar-links {
     width: 40%;
     display: flex;
     justify-content: space-around;
 }
 
-.top-navbar-links>a{
+.top-navbar-links>a {
     color: var(--color-primary);
     transition: var(--transition);
 }
 
-.top-navbar-links>a:hover{
-    text-shadow: 3px 4px 5px  var(--color-primary-variant);
+.top-navbar-links>a:hover {
+    text-shadow: 3px 4px 5px var(--color-primary-variant);
 }

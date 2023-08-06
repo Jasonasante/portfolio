@@ -3,12 +3,12 @@ import "./headerNavbar.css"
 
 const HeaderNavbar = () => {
     return (
-        <nav className="top-navbar">
+        <nav className="top-navbar" id="top">
             <div className="top-navbar-links">
-                <a href="/">Portfolio</a>
-                <a href="/bio">Bio</a>
-                <a href="/projects">Projects</a>
-                <a href="/other">Other</a>
+                <a href="#/">Portfolio</a>
+                <a href="#/bio">Bio</a>
+                <a href="#/projects">Projects</a>
+                <a href="#/other">Other</a>
             </div>
         </nav>
     )

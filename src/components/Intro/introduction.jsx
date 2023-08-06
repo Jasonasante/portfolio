@@ -7,7 +7,7 @@ import Technologies from '../technologies/technologies'
 
 const Introduction = () => {
     return (
-        <div className='introduction container'>
+        <section className='introduction container' id="intro">
             <div className='introduction-div'>
                 <div className='intro-text'>
                     <h1>Full Stack Developer</h1>
@@ -20,7 +20,7 @@ const Introduction = () => {
                     <img className='intro-img' alt="Jason Asante's Head Shot" src={HeadShot} loading='lazy' />
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

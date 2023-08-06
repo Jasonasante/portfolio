@@ -1,9 +1,9 @@
 import React from 'react'
 import './about.css'
 
-const About = ()=>{
-    return(
-        <div>About</div>
+const About = () => {
+    return (
+        <section id="about">About</section>
     )
 }
 

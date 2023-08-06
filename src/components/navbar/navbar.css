@@ -1,0 +1,55 @@
+:root {
+    /* i want black but not black black */
+    --color-bg: black;
+    /* lighter black */
+    --color-bg-variant: #2c2c6c;
+    /* green */
+    --color-primary: rgb(171, 249, 55);
+    --color-primary-variant: rgba(77, 181, 255, 0.4);
+    --color-white: #fff;
+    --color-light: rgba(255, 255, 255, 0.6);
+
+    --container-width-lg: 75%;
+    --container-width-md: 86%;
+    --container-width-sm: 90%;
+}
+
+.bottom-navbar {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    padding: 0.7rem 1.7rem;
+    border-radius: 2rem;
+    background-color: rgba(123, 123, 123, 0.188);
+    display: flex;
+    gap: 1rem;
+    backdrop-filter: blur(10rem);
+}
+
+.bottom-navbar.blur {
+    filter: blur(15px);
+    background-color: rgb(95, 95, 95);
+}
+
+.bottom-navbar a,
+.bottom-navbar button {
+    background: transparent;
+    padding: 0.7rem;
+    border-radius: 50%;
+    display: flex;
+    color: var(--color-bg);
+    font-size: 1.3rem;
+}
+
+.bottom-navbar a:hover {
+    background-color: rgb(47, 47, 47);
+    color: var(--color-primary);
+    box-shadow: 0px 0px 3px var(--color-primary);
+}
+
+.bottom-navbar a.active {
+    background-color: rgb(47, 47, 47);
+    color: var(--color-white);
+}

@@ -1,33 +1,50 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 import Loader from './components/Loader/loader';
 import Portfolio from './pages/portfolio';
 import HeaderNavbar from './components/header-navabar/headerNavbar';
+import BottomNavBar from './components/navbar/navbar';
+import Biography from './pages/bio';
+import Projects from './pages/projects';
+import Other from './pages/other';
 
 function App() {
   const [loaded, setLoaded] = useState(false)
+  const [component, setComponent] = useState(<Portfolio />)
 
-  function removeLoader() {
-    setTimeout(() => setLoaded(true), 5000)
-  }
-  removeLoader()
+  useEffect(() => {
+    function removeLoader() {
+      setTimeout(() => setLoaded(true), 5000);
+    }
+    removeLoader();
+  }, []);
 
-  let component
-  console.log("here", window.location)
-  switch (window.location.pathname) {
-    case "/":
-      component = <Portfolio />
-      break
-    case "/bio":
-      break
-    case "/projects":
-      break
-    case "/other":
-      // Component=<Other/>
-      break
-    default:
-      component = <Portfolio />
+  window.onhashchange = (evt) => {
+    let page = evt.newURL.split("/").at(-1)
+    switch (page) {
+      case "":
+        setComponent(<Portfolio />)
+        break
+      case "bio":
+        setComponent(<Biography />)
+        break
+      case "projects":
+        setComponent(<Projects />)
+        break
+      case "other":
+        setComponent(<Other />)
+        break
+      default:
+        setComponent(<Portfolio />)
+    }
   }
+  console.log(window.location.href)
+  useEffect(() => {
+    if (window.location.href.includes("#")) {
+      window.location.href = window.location.pathname
+    }
+  }, [loaded])
+
 
   return (
     <>
@@ -35,6 +52,7 @@ function App() {
         <>
           <HeaderNavbar />
           {component}
+          <BottomNavBar />
         </>
       ) : (
         <Loader />
