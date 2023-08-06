@@ -1,19 +1,3 @@
-:root {
-    /* i want black but not black black */
-    --color-bg: black;
-    /* lighter black */
-    --color-bg-variant: #2c2c6c;
-    /* green */
-    --color-primary: rgb(171, 249, 55);
-    --color-primary-variant: rgba(77, 181, 255, 0.4);
-    --color-white: #fff;
-    --color-light: rgba(255, 255, 255, 0.6);
-
-    --container-width-lg: 75%;
-    --container-width-md: 86%;
-    --container-width-sm: 90%;
-}
-
 .bottom-navbar {
     position: fixed;
     bottom: 30px;

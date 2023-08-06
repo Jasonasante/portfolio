@@ -19,13 +19,10 @@ html {
 }
 
 :root {
-  /* i want black but not black black */
   --color-bg: black;
-  /* lighter black */
-  --color-bg-variant: #2c2c6c;
-  /* green */
+  --color-bg-variant: rgb(18, 18, 18);
   --color-primary: rgb(171, 249, 55);
-  --color-primary-variant: rgba(77, 181, 255, 0.4);
+  --color-primary-variant: rgb(124, 205, 2);
   --color-white: #fff;
   --color-light: rgba(255, 255, 255, 0.6);
 
@@ -104,6 +101,20 @@ section>h2 {
   cursor: pointer;
   background-color: var(--color-primary);
   border: 1px solid var(--color-bg);
+}
+
+.btn-primary:hover {
+  color: var(--color-primary);
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--color-primary);
+  box-shadow: 0px 0px 6px var(--color-primary);
+}
+
+.btn-primary:active {
+  color: var(--color-primary);
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 1px solid var(--color-primary);
+  box-shadow: 0px 0px 6px var(--color-primary);
 }
 
 img {

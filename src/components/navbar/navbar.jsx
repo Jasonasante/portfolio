@@ -8,13 +8,26 @@ import CV from '../../assets/cv.pdf'
 import { useEffect, useState } from 'react'
 
 const BottomNavBar = () => {
-    const [active, setActive] = useState('#/')
+    const [active, setActive] = useState('#intro')
     const [disabled, setDisabled] = useState(false)
-    const hrefsToWatch = ["#/", "#about", "#experience", "#contact"];
+    const hrefsToWatch = ["#intro", "#about", "#experience", "#contact"];
+    useEffect(() => {
+        if (typeof window !== 'undefined' && !hrefsToWatch.includes(window.location.href.split("/").at(-1))) {
+            console.log(window.location.href.split("/").at(-1))
+            setActive("#/" + window.location.href.split("/").at(-1))
+        }
+    }, [window.location.href])
 
     useEffect(() => {
-        if (hrefsToWatch.includes(active)) {
-            const handleScroll = () => {
+        if (active === "#/bio" || active === "#/projects" || active === "#/other") {
+            setDisabled(false);
+        } else {
+            setDisabled(true)
+        }
+    }, [active]);
+    useEffect(() => {
+        const handleScroll = () => {
+            if (document.getElementById("about").getBoundingClientRect() !== null) {
                 const position = window.scrollY;
                 const about = document.getElementById("about").getBoundingClientRect()
                 const experience = document.getElementById("experience").getBoundingClientRect()
@@ -29,22 +42,16 @@ const BottomNavBar = () => {
                 } else if (position >= contact.top + sectionHeight) {
                     setActive("#contact");
                 }
-            };
-            window.addEventListener('scroll', handleScroll, { passive: true });
+            }
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
 
-            return () => {
-                window.removeEventListener('scroll', handleScroll);
-            };
-        }
 
     }, []);
-    useEffect(() => {
-        if (active === "#/bio" || active === "#/projects" || active === "#/other") {
-            setDisabled(false);
-        } else {
-            setDisabled(true)
-        }
-    }, [active]);
+
     return (
         <>
             <nav className='bottom-navbar blur'>
@@ -67,7 +74,7 @@ const BottomNavBar = () => {
             </nav>
             <nav className='bottom-navbar'>
                 <a href="#top"><AiOutlineArrowUp /></a>
-                <a href="#intro" className={active === "#intro" ? "active" : ""} onClick={() => setActive("#intro")}><BiFolderOpen /></a>
+                <a href="#intro" className={active === "#intro" || "" ? "active" : ""} onClick={() => setActive("#intro")}><BiFolderOpen /></a>
                 {disabled &&
                     <>
                         <a href="#about" className={active === "#about" ? "active" : ""} onClick={() => setActive("#about")}><SiAboutdotme /></a>

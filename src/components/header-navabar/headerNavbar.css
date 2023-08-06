@@ -1,16 +1,3 @@
-:root {
-    --color-bg: rgb(15, 15, 15);
-    --color-bg-variant: #2c2c6c;
-    --color-primary: rgb(171, 249, 55);
-    --color-primary-variant: rgba(189, 252, 94, 0.8);
-    --color-white: #fff;
-    --color-light: rgba(255, 255, 255, 0.6);
-    --container-width-lg: 75%;
-    --container-width-md: 86%;
-    --container-width-sm: 90%;
-    --transition: all 400ms ease;
-}
-
 .top-navbar {
     width: 100%;
     background-color: var(--color-bg);
