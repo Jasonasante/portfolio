@@ -1,6 +1,7 @@
 import React from 'react'
 import './experience.css'
 import { LuVerified } from 'react-icons/lu'
+import { AiOutlineArrowRight } from 'react-icons/ai'
 
 const Experience = () => {
     return (
@@ -101,9 +102,6 @@ const Experience = () => {
                         </article>
                     </div>
                 </div>
-            </div>
-            <div className='more-projects'>
-                <a href="#/projects" className='btn-primary'>Projects </a>
             </div>
         </section>
     )

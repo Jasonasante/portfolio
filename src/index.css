@@ -12,9 +12,11 @@
 
 html {
   scroll-behavior: smooth;
+  width: 100%;
+  height: 100%;
 }
 
-::-webkit-scrollbar {
+body::-webkit-scrollbar {
   display: none;
 }
 
@@ -38,6 +40,8 @@ body {
   color: var(--color-white);
   line-height: 1.7;
   background-image: url('../src/assets/grunge-texture.png');
+  width: 100%;
+  height: 100%;
 }
 
 .container {
@@ -59,7 +63,7 @@ h1 {
 
 section {
   margin-top: 8rem;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 section>h2,

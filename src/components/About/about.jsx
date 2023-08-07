@@ -36,8 +36,10 @@ const About = () => {
                         </article>
                     </div>
                     <p>Self-motivated Junior Full-Stack Software Developer with 18 months of experience programming in Go, JavaScript and about to embark on Rust. Continuously seeking opportunities to gain experience and grow as a software developer. Imbued with time-management, prioritisation and critical thinking skills gained as a Biomedical Science Student and fellow at 01Founders. </p>
-                    <a href="#/bio" className='btn-primary'>Learn more...</a>
                 </div>
+            </div>
+            <div className='learn-more'>
+                <a href="#/bio" className='btn-primary'>Learn more...</a>
             </div>
         </section>
     )

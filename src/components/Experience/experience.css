@@ -45,9 +45,27 @@
     font-size: x-large;
 }
 
-.more-projects {
-    width: 90%;
-    left: 50%;
-    transform: translateX(50%);
-    margin-top: 4rem;
+@media screen and (max-width:1024px) {
+
+    .experience-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    .experience-container>div:hover {
+        transform: scale(1.05);
+    }
+}
+
+@media screen and (max-width:600px) {
+
+    .experience-container {
+        width: 80%;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .experience-container>div:hover {
+        transform: scale(1.05);
+    }
 }

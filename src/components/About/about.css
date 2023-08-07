@@ -79,7 +79,20 @@
     margin-bottom: 1rem;
 }
 
-@media screen and (max-width:600px) {
+.learn-more {
+    width: 90%;
+    left: 50%;
+    transform: translateX(50%);
+    margin-top: 4rem;
+}
+
+.learn-more>a {
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width:1024px) {
+
     .about-me {
         width: 65%;
         margin: 0 auto 3rem;
@@ -91,5 +104,34 @@
 
     .about-content {
         text-align: center;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 5%;
+    }
+
+    .about-me {
+        width: 65%;
+        margin: 0 auto 3rem;
+    }
+
+    .about-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .about-content {
+        text-align: center;
+    }
+
+    .about-content p {
+        font-size: smaller;
+    }
+
+    .about-content a {
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
