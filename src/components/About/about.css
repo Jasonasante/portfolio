@@ -78,3 +78,18 @@
 .about-content p {
     margin-bottom: 1rem;
 }
+
+@media screen and (max-width:600px) {
+    .about-me {
+        width: 65%;
+        margin: 0 auto 3rem;
+    }
+
+    .about-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .about-content {
+        text-align: center;
+    }
+}

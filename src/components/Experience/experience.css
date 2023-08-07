@@ -1,0 +1,53 @@
+.experience-container {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    gap: 3rem;
+    height: max-content;
+}
+
+.experience-container>div {
+    background: var(--color-primary-variant);
+    border-radius: 2rem;
+    padding: 1.5rem 1rem;
+    height: 100%;
+    transition: var(--transition);
+}
+
+.experience-container>div:hover {
+    transform: scale(1.2);
+    background: var(--color-bg-variant);
+    color: var(--color-primary);
+}
+
+.experience-container>div>h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.experience-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.experience-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid var(--color-primary-variant);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 1rem;
+}
+
+.experience-icon {
+    font-size: x-large;
+}
+
+.more-projects {
+    width: 90%;
+    left: 50%;
+    transform: translateX(50%);
+    margin-top: 4rem;
+}
