@@ -33,7 +33,7 @@
     padding: 1rem;
     align-items: center;
     transition: var(--transition);
-    height: 15rem;
+    height: 18rem;
 }
 
 .recent-project-card:hover {
@@ -75,6 +75,12 @@
 .recent-project-content>p {
     margin-bottom: 0.5rem;
     font-size: x-small;
+}
+
+.recent-project-links {
+    grid-column: span 2;
+    display: flex;
+    justify-content: center;
 }
 
 .recent-project-content>small {

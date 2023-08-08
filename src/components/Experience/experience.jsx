@@ -1,7 +1,6 @@
 import React from 'react'
 import './experience.css'
 import { LuVerified } from 'react-icons/lu'
-import { AiOutlineArrowRight } from 'react-icons/ai'
 
 const Experience = () => {
     return (
