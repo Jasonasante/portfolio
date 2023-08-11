@@ -30,19 +30,19 @@ const BottomNavBar = () => {
         const handleScroll = () => {
             if (document.getElementById("about").getBoundingClientRect() !== null) {
                 const position = window.scrollY;
-                const about = document.getElementById("about").getBoundingClientRect()
-                const experience = document.getElementById("experience").getBoundingClientRect()
-                const recents = document.getElementById("recent-projects").getBoundingClientRect()
-                const contact = document.getElementById("contact").getBoundingClientRect()
-                if (position < about.top) {
+                const about = document.getElementById("about")
+                const experience = document.getElementById("experience")
+                const recents = document.getElementById("recent-projects")
+                const contact = document.getElementById("contact")
+                if (position < about.offsetTop) {
                     setActive("#intro");
-                } else if (position >= about.top && position < experience.top + experience.height) {
+                } else if (position > about.offsetTop && position < experience.offsetTop) {
                     setActive("#about");
-                } else if (position >= experience.top + experience.height && position < recents.top + recents.height) {
+                } else if (position > experience.offsetTop && position < recents.offsetTop) {
                     setActive("#experience");
-                } else if (position >= recents.top + recents.height && position < contact.top + contact.height) {
+                } else if (position > recents.offsetTop && position < contact.offsetTop) {
                     setActive("#recent-projects");
-                } else if (position >= contact.top + contact.height) {
+                } else if (position > contact.offsetTop) {
                     setActive("#contact");
                 }
             }
@@ -93,7 +93,7 @@ const BottomNavBar = () => {
                 <a href={CV} className={active === "#cv" ? "active" : ""} onClick={() => setActive("#cv")} download><BiArrowToBottom /></a>
                 <a href="https://www.linkedin.com/in/jason-asante/"><AiFillLinkedin /></a>
                 <a href="https://github.com/Jasonasante"><AiFillGithub /></a>
-                <a href="#down"><AiOutlineArrowDown /></a>
+                <a href="#bottom"><AiOutlineArrowDown /></a>
             </nav>
         </>
     )

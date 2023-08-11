@@ -23,3 +23,13 @@
 .top-navbar-links>a:hover {
     text-shadow: 3px 4px 5px var(--color-primary-variant);
 }
+
+.top-header {
+    width: 100%;
+    background-color: var(--color-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 80px;
+}

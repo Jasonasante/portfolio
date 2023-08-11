@@ -5,71 +5,78 @@ import MakeYourGame from '../../assets/make-your-game.jpg'
 import SocialNetwork from '../../assets/social-network.png'
 import RealTimeForum from '../../assets/real-time-forum.png'
 import Bomberman from '../../assets/bomberman-dom.png'
+import TodoMVC from '../../assets/todo.png'
 
 const RecentProjects = () => {
+    const projectArr = [
+        {
+            title: "Bomberman", image: Bomberman,
+            description: "A multi-player last-man standing video game where users can interact via messaging",
+            languages: "JavaScript, custom mini-framework",
+            links: { "GitHub": "https://github.com/RJNA-Rangers/bomberman-dom" }
+        },
+        {
+            title: "Social Network", image: SocialNetwork,
+            description: `A Single-page web forum allowing user interactions via followings, posts, comments, and
+             likes and communicate via group or private messaging.`,
+            languages: "React, Go, RESTful API, and SQLite3 Migrations",
+            links: { "GitHub": "https://github.com/Jasonasante/social-network-01" }
+        },
+        {
+            title: "Mini-Framework", image: TodoMVC,
+            description: "Designed and implemented a personalized JavaScript framework to create a unique TodoMVC page.",
+            languages: "JavaScript, HTML, CSS",
+            links: {
+                GitHub: "https://github.com/RJNA-Rangers/mini-framework",
+                Use: "https://app.netlify.com/sites/todomvc-rjna/overview"
+            }
+        },
+        {
+            title: "Real-Time Forum", image: RealTimeForum,
+            description: `A Single-page web forum allowing user interactions via posts, comments, and likes and 
+            communicate via private messaging.`,
+            languages: "JavaScript, Go, RESTful API, and SQLite3",
+            links: { "GitHub": "https://github.com/Jasonasante/real-time-forum" }
+        },
+        {
+            title: "Brick Invaders", image: MakeYourGame,
+            description: `Video Game infusion of brick-breaker and space-invaders.`,
+            languages: "JavaScript, HTML, CSS",
+            links: { Play: "https://01f-make-your-game-public.vercel.app/?lvl=1" }
+        }
+    ]
     return (
         <section id="recent-projects">
             <h5>Get To Know</h5>
             <h2>My Recent Projects</h2>
             <div className="container recent-projects-container">
                 <div className="recent-projects-cards">
-                    <article className='recent-project-card'>
-                        <div className='recent-project-image'>
-                            <img src={Bomberman} alt="Bomberman" />
-                        </div>
-                        <div className="recent-project-content">
-                            <h4>Bomberman</h4>
-                            <p> A multi-player last-man standing video game where users can interact via messaging</p>
-                            <small className='text-light'>JavaScript, custom mini-framework</small>
-                        </div>
-                        <div className="recent-project-links">
-                            <a href="https://github.com/RJNA-Rangers/bomberman-dom" className='btn-primary'> GitHub</a>
-                        </div>
-                    </article>
-                    <article className='recent-project-card'>
-                        <div className='recent-project-image'>
-                            <img src={SocialNetwork} alt="Social Network" />
-                        </div>
-                        <div className="recent-project-content">
-
-                            <h4>Social Network</h4>
-                            <p>
-                                A Single-page web forum allowing user interactions via followings, posts, comments, and likes and communicate via group or private messaging.
-                            </p>
-                            <small className='text-light'>React, Go, RESTful API, and SQLite3 Migrations</small>
-                        </div>
-                        <div className="recent-project-links">
-                            <a href="https://github.com/Jasonasante/social-network-01" className='btn-primary'> GitHub</a>
-                        </div>
-                    </article>
-                    <article className='recent-project-card'>
-                        <div className='recent-project-image'>
-                            <img src={RealTimeForum} alt="Real Time Forum" />
-                        </div>
-                        <div className="recent-project-content">
-                            <h4>Real Time Forum</h4>
-                            <p>
-                                A Single-page web forum allowing user interactions via posts, comments, and likes and communicate via private messaging.
-                            </p>
-                            <small className='text-light'>JavaScript, Go, RESTful API, and SQLite3</small>
-                        </div>
-                        <div className="recent-project-links">
-                            <a href="https://github.com/Jasonasante/real-time-forum" className='btn-primary'> GitHub</a>
-                        </div>
-                    </article>
-                    <article className='recent-project-card'>
-                        <div className='recent-project-image'>
-                            <img src={MakeYourGame} alt="Brick Invaders" />
-                        </div>
-                        <div className="recent-project-content">
-                            <h4>Brick Invaders</h4>
-                            <p>Video Game infusion of brick-breaker and space-invaders.</p>
-                            <small className='text-light'>JavaScript, HTML, CSS</small>
-                        </div>
-                        <div className="recent-project-links">
-                            <a href="https://01f-make-your-game-public.vercel.app/?lvl=1" className='btn-primary'> Play</a>
-                        </div>
-                    </article>
+                    {
+                        projectArr.map(project => {
+                            return (
+                                <article className='recent-project-card'>
+                                    <div className='recent-project-image'>
+                                        <img src={project.image} alt={project.title} loading='lazy' />
+                                    </div>
+                                    <div className="recent-project-content">
+                                        <h4>{project.title}</h4>
+                                        <p> {project.description}</p>
+                                        <small className='text-light'>{project.languages}</small>
+                                    </div>
+                                    <div className="recent-project-links">
+                                        {
+                                            Object.entries(project.links).map(([key, value]) => {
+                                                console.log(key, value)
+                                                return (
+                                                    <a href={value} className='btn-primary' >{key}</a>
+                                                );
+                                            })
+                                        }
+                                    </div>
+                                </article>
+                            )
+                        })
+                    }
                 </div>
             </div>
             <div className='more-projects'>

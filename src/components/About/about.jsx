@@ -35,7 +35,7 @@ const About = () => {
                             <small> 15+ Completed</small>
                         </article>
                     </div>
-                    <p>Self-motivated Junior Full-Stack Software Developer with 18 months of experience programming in Go, JavaScript and about to embark on Rust. Continuously seeking opportunities to gain experience and grow as a software developer. Imbued with time-management, prioritisation and critical thinking skills gained as a Biomedical Science Student and fellow at 01Founders. </p>
+                    <p>Self-motivated Junior Full-Stack Software Developer with 18+ months of experience programming in Go, JavaScript and about to embark on Rust. Continuously seeking opportunities to gain experience and grow as a software developer. Imbued with time-management, prioritisation and critical thinking skills gained as a Biomedical Science Student and fellow at 01Founders. </p>
                 </div>
             </div>
             <div className='learn-more'>

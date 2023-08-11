@@ -53,6 +53,7 @@ function App() {
           <HeaderNavbar />
           {component}
           <BottomNavBar />
+          <div id='bottom'></div>
         </>
       ) : (
         <Loader />
