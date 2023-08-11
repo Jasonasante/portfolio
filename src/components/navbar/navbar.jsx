@@ -12,6 +12,7 @@ const BottomNavBar = () => {
     const [active, setActive] = useState('#intro')
     const [disabled, setDisabled] = useState(false)
     const hrefsToWatch = ["#intro", "#about", "#experience", "#contact", "#recent-projects"];
+
     useEffect(() => {
         if (typeof window !== 'undefined' && !hrefsToWatch.includes(window.location.href.split("/").at(-1))) {
             console.log(window.location.href.split("/").at(-1))
@@ -26,14 +27,24 @@ const BottomNavBar = () => {
             setDisabled(true)
         }
     }, [active]);
+
     useEffect(() => {
         const handleScroll = () => {
-            if (document.getElementById("about").getBoundingClientRect() !== null) {
+            if (document.getElementById("about") !== null) {
                 const position = window.scrollY;
+                const bottomNavbarArr = Array.from(document.querySelectorAll(".bottom-navbar"))
+                const top = document.getElementById("top")
                 const about = document.getElementById("about")
                 const experience = document.getElementById("experience")
                 const recents = document.getElementById("recent-projects")
                 const contact = document.getElementById("contact")
+
+                if (position < top.offsetTop + top.offsetHeight) {
+                    bottomNavbarArr.forEach(bottomNavbar => bottomNavbar.style.display = "none")
+                } else {
+                    bottomNavbarArr.forEach(bottomNavbar => bottomNavbar.style.display = "flex")
+                }
+
                 if (position < about.offsetTop) {
                     setActive("#intro");
                 } else if (position > about.offsetTop && position < experience.offsetTop) {
@@ -51,8 +62,6 @@ const BottomNavBar = () => {
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
-
-
     }, []);
 
     return (
@@ -65,9 +74,9 @@ const BottomNavBar = () => {
                         <button ><SiAboutdotme /></button>
                         <button><LuFolderCog /></button>
                         <button ><AiOutlineUser /></button>
+                        <button ><AiOutlineFundProjectionScreen /></button>
                     </>
                 }
-                <button ><AiOutlineFundProjectionScreen /></button>
                 <button ><TbAccessPoint /></button>
                 <button ><TbAccessPoint /></button>
                 <button ><BiArrowToBottom /></button>

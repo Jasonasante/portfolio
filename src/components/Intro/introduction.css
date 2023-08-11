@@ -1,4 +1,8 @@
-.introduction-div{
+.introduction {
+    margin-top: 80px;
+}
+
+.introduction-div {
     display: flex;
     width: 80%;
     justify-content: center;
@@ -8,14 +12,14 @@
     border-radius: 1rem;
 }
 
-.intro-text{
+.intro-text {
     width: 70%;
 }
 
-.head-shot-container{
+.head-shot-container {
     width: 25%;
 }
 
-.head-shot-container>img{
+.head-shot-container>img {
     border-radius: 50%;
 }

@@ -5,8 +5,6 @@
     justify-content: flex-end;
     align-items: center;
     padding: 10px;
-    margin-bottom: 80px;
-    /* position: fixed; */
 }
 
 .top-navbar-links {
@@ -32,4 +30,24 @@
     align-items: center;
     padding: 10px;
     margin-bottom: 80px;
+}
+
+@media screen and (max-width:1024px) {
+    .top-navbar-links {
+        width: 60%;
+    }
+
+    .top-navbar-links>a {
+        font-size: medium;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .top-navbar-links {
+        width: 100%;
+    }
+
+    .top-navbar-links>a {
+        font-size: x-small;
+    }
 }

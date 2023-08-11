@@ -7,7 +7,7 @@
     padding: 0.7rem 1.7rem;
     border-radius: 2rem;
     background-color: rgba(123, 123, 123, 0.188);
-    display: flex;
+    display: none;
     align-items: center;
     gap: 1rem;
     backdrop-filter: blur(10rem);
@@ -42,4 +42,38 @@
 .bottom-navbar a.active {
     background-color: rgb(47, 47, 47);
     color: var(--color-white);
+}
+
+@media screen and (max-width:1024px) {
+    .bottom-navbar {
+        left: 0;
+        transform: translateX(0);
+        justify-content: space-between;
+        width: 100vw;
+    }
+
+    .bottom-navbar a,
+    .bottom-navbar button {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width:600px) {
+
+    .bottom-navbar {
+        padding: 0.1rem 0.2rem;
+        gap: 0rem;
+        transform: translateX(0);
+        flex-direction: column;
+        left: 10px;
+        top: 50vh;
+        height: max-content;
+        width: max-content;
+        transform: translateY(-50%);
+    }
+
+    .bottom-navbar a,
+    .bottom-navbar button {
+        font-size: 0.6rem;
+    }
 }

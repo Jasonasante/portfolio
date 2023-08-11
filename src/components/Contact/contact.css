@@ -6,7 +6,6 @@
     gap: 10%;
     width: 70%;
     margin-bottom: 4rem;
-
 }
 
 .contact-options {
@@ -77,4 +76,29 @@
 .send-message button {
     font-family: 'Goma Octagon';
 
+}
+
+@media screen and (max-width:1024px) {
+    .contact-container {
+        width: 85%;
+    }
+
+    .contact-option>p {
+        font-size: large;
+    }
+
+    .contact-option>a {
+        font-size: small;
+    }
+
+    .contact-option {
+        padding: 2rem;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 5%;
+    }
 }

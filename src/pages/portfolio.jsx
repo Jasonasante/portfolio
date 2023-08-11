@@ -6,12 +6,14 @@ import Contact from "../components/Contact/contact";
 import RecentProjects from "../components/Recent-projects/recent-projects";
 
 const Portfolio = () => {
+    const bottomNavbarArr = Array.from(document.querySelectorAll(".bottom-navbar"))
+    bottomNavbarArr.forEach(bottomNavbar => bottomNavbar.style.display = "none")
     return (
         <>
             <Introduction />
             <About />
             <Experience />
-            <RecentProjects/>
+            <RecentProjects />
             <Contact />
         </>
     )

@@ -66,7 +66,6 @@ const RecentProjects = () => {
                                     <div className="recent-project-links">
                                         {
                                             Object.entries(project.links).map(([key, value]) => {
-                                                console.log(key, value)
                                                 return (
                                                     <a href={value} className='btn-primary' >{key}</a>
                                                 );
