@@ -5,7 +5,7 @@ const Projects = () => {
     bottomNavbarArr.forEach(bottomNavbar => bottomNavbar.style.display = "flex")
     return (
         <div>
-            Projects Here
+            projects here
         </div>
     )
 }

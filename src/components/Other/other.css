@@ -1,0 +1,18 @@
+.other-items{
+    display: flex;
+    flex-direction: column;
+}
+
+.other-items{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+.other-links{
+    display: grid;
+    width: 95%;
+    gap: 5%;
+    grid-template-columns: repeat(3, 30%);
+}
