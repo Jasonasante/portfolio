@@ -37,6 +37,7 @@ const PhotoshopArticle = () => {
     const OpenPhotoshop = () => {
         setVisible(visible => !visible)
         document.body.style.overflowY = "hidden"
+        window.scrollTo(0, 0)
     }
 
     const ClosePhotoshop = () => {
@@ -54,7 +55,7 @@ const PhotoshopArticle = () => {
                                 <a href="https://www.deviantart.com/chumzycreates"><FaDeviantart /></a>
                                 <a href="https://www.deviantart.com/chumzycreates"><FaInstagram /></a>
                             </div>
-                            <h2>Chumzy Creates</h2>
+                            <h3>Chumzy Creates</h3>
                             <button className='photoshop-close' onClick={ClosePhotoshop}><IoClose className='close-icon' /></button>
                         </div>
                         <div className='photoshop-gallery'>
@@ -102,8 +103,8 @@ const PhotoshopArticle = () => {
                     </div>
                 </div>
             }
-            <article className='about-me-card' onClick={OpenPhotoshop}>
-                <SiAdobephotoshop className='about-icon' />
+            <article className='other-card' onClick={OpenPhotoshop}>
+                <SiAdobephotoshop className='other-icon' />
                 <h5>Photoshop</h5>
             </article>
         </>

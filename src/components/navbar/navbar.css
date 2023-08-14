@@ -11,6 +11,7 @@
     align-items: center;
     gap: 1rem;
     backdrop-filter: blur(10rem);
+    z-index: 999;
 }
 
 .bottom-navbar.blur {
@@ -46,15 +47,14 @@
 
 @media screen and (max-width:1024px) {
     .bottom-navbar {
-        left: 0;
-        transform: translateX(0);
+        padding: 0.5rem;
         justify-content: space-between;
-        width: 100vw;
+        width: 80%;
     }
 
     .bottom-navbar a,
     .bottom-navbar button {
-        font-size: 1.1rem;
+        font-size: 0.9rem;
     }
 }
 

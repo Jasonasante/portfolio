@@ -31,3 +31,16 @@
     height: 100%;
     object-fit: cover;
 }
+
+@media screen and (max-width:1024px) {
+    .gd-slider-container{
+        width: 90%;
+        height: 40vh;
+    }
+}
+@media screen and (max-width:600px) {
+    .gd-slider-container{
+        width: 90%;
+        height: 10vh;
+    }
+  }

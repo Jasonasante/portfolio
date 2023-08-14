@@ -26,7 +26,7 @@ const About = () => {
                         <article className='about-me-card'>
                             <GiDiploma className='about-icon' />
                             <h5>University of Warwick</h5>
-                            <small> Upper Second Division (2:1)</small><br></br>
+                            <small> 2:1</small>
                             <small> Bsc Biomedical Science</small>
                         </article>
                         <article className='about-me-card'>
