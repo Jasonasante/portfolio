@@ -7,7 +7,6 @@ const HeaderNavbar = () => {
             <div className="top-navbar-links">
                 <a href="#/">Portfolio</a>
                 <a href="#/bio">Bio</a>
-                <a href="#/projects">Projects</a>
                 <a href="#/other">Other</a>
             </div>
         </nav>

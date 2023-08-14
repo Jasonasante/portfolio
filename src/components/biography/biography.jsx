@@ -1,7 +1,7 @@
 import React from 'react'
 import './biography.css'
 import { FaHandshake } from 'react-icons/fa'
-import { AiOutlineStock } from 'react-icons/ai'
+import { AiOutlineStock} from 'react-icons/ai'
 import { TfiThought } from 'react-icons/tfi'
 
 const DetailsABoutMe = () => {

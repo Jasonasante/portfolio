@@ -4,7 +4,6 @@ import { BiArrowToBottom, BiFolderOpen } from 'react-icons/bi'
 import { TbAccessPoint } from 'react-icons/tb'
 import { LuFolderCog } from 'react-icons/lu'
 import { SiAboutdotme } from 'react-icons/si'
-import { GiBackwardTime } from 'react-icons/gi'
 import CV from '../../assets/cv.pdf'
 import { useEffect, useState } from 'react'
 
@@ -21,7 +20,7 @@ const BottomNavBar = () => {
     }, [window.location.href])
 
     useEffect(() => {
-        if (active === "#/bio" || active === "#/projects" || active === "#/other") {
+        if (active === "#/bio" || active === "#/other") {
             setDisabled(false);
         } else {
             setDisabled(true)
@@ -45,15 +44,15 @@ const BottomNavBar = () => {
                     bottomNavbarArr.forEach(bottomNavbar => bottomNavbar.style.display = "flex")
                 }
 
-                if (position < about.offsetTop) {
+                if (position < about.offsetTop-32) {
                     setActive("#intro");
-                } else if (position > about.offsetTop && position < experience.offsetTop) {
+                } else if (position >= about.offsetTop && position < experience.offsetTop) {
                     setActive("#about");
-                } else if (position > experience.offsetTop && position < recents.offsetTop) {
+                } else if (position >= experience.offsetTop && position < recents.offsetTop-32) {
                     setActive("#experience");
-                } else if (position > recents.offsetTop && position < contact.offsetTop) {
+                } else if (position >= recents.offsetTop && position < contact.offsetTop) {
                     setActive("#recent-projects");
-                } else if (position > contact.offsetTop) {
+                } else if (position >= contact.offsetTop) {
                     setActive("#contact");
                 }
             }
@@ -78,7 +77,6 @@ const BottomNavBar = () => {
                     </>
                 }
                 <button ><TbAccessPoint /></button>
-                <button ><TbAccessPoint /></button>
                 <button ><BiArrowToBottom /></button>
                 <button ><AiOutlineContacts /></button>
                 <button><AiFillLinkedin /></button>
@@ -92,12 +90,11 @@ const BottomNavBar = () => {
                     <>
                         <a href="#about" className={active === "#about" ? "active" : ""} onClick={() => setActive("#about")}><SiAboutdotme /></a>
                         <a href="#experience" className={active === "#experience" ? "active" : ""} onClick={() => setActive("#experience")}><LuFolderCog /></a>
-                        <a href="#recent-projects" className={active === "#recent-projects" ? "active" : ""} onClick={() => setActive("#recent-projects")}><GiBackwardTime /></a>
+                        <a href="#recent-projects" className={active === "#recent-projects" ? "active" : ""} onClick={() => setActive("#recent-projects")}><AiOutlineFundProjectionScreen /></a>
                         <a href="#contact" className={active === "#contact" ? "active" : ""} onClick={() => setActive("#contact")}><AiOutlineContacts /></a>
                     </>
                 }
                 <a href="#/bio" className={active === "#/bio" ? "active" : ""} onClick={() => setActive("#/bio")}><AiOutlineUser /></a>
-                <a href="#/projects" className={active === "#/projects" ? "active" : ""} onClick={() => setActive("#/projects")}><AiOutlineFundProjectionScreen /></a>
                 <a href="#/other" className={active === "#/other" ? "active" : ""} onClick={() => setActive("#/other")}><TbAccessPoint /></a>
                 <a href={CV} className={active === "#cv" ? "active" : ""} onClick={() => setActive("#cv")} download><BiArrowToBottom /></a>
                 <a href="https://www.linkedin.com/in/jason-asante/"><AiFillLinkedin /></a>

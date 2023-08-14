@@ -2,13 +2,12 @@
     margin: 0 5px;
     display: flex;
     gap: 1rem;
-    font-size: small;
     text-align: center;
 }
 
 @media screen and (max-width:1024px) {
     .actions {
-        gap: 0.5rem;
+        gap: 1rem;
     }
 }
 

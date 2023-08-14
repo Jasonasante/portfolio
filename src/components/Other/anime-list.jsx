@@ -33,13 +33,13 @@ let groups = distributeInteger(length, 4, images).reverse()
 const AnimeList = () => {
     const [visible, setVisible] = useState(false)
     console.log(groups)
-    const OpenPhotoshop = () => {
+    const OpenAnime = () => {
         setVisible(visible => !visible)
         document.body.style.overflowY = "hidden"
         window.scrollTo(0, 0)
     }
 
-    const ClosePhotoshop = () => {
+    const CloseAnime = () => {
         setVisible(visible => !visible)
         document.body.style.overflowY = "auto"
     }
@@ -51,12 +51,12 @@ const AnimeList = () => {
                     <div className="anime">
                         <div className='anime-header'>
                             <h3>Favourite Anime</h3>
-                            <button className='anime-close' onClick={ClosePhotoshop}><IoClose className='close-icon' /></button>
+                            <button className='anime-close' onClick={CloseAnime}><IoClose className='close-icon' /></button>
                         </div>
                     </div>
                 </div>
             }
-            <article className='other-card coming-soon' onClick={OpenPhotoshop}>
+            <article className='other-card coming-soon'>
                 <SiMyanimelist className='other-icon' />
                 <h5>Anime Tier List</h5>
             </article>

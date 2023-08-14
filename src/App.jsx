@@ -28,9 +28,6 @@ function App() {
       case "bio":
         setComponent(<Biography />)
         break
-      case "projects":
-        setComponent(<Projects />)
-        break
       case "other":
         setComponent(<Other />)
         break
@@ -38,10 +35,26 @@ function App() {
         setComponent(<Portfolio />)
     }
   }
-  console.log(window.location.href)
+  // console.log(window.location.href)
+  // useEffect(() => {
+  //   if (window.location.href.includes("#")) {
+  //     window.location.href = window.location.pathname
+  //   }
+  // }, [loaded])
+
   useEffect(() => {
-    if (window.location.href.includes("#")) {
-      window.location.href = window.location.pathname
+    switch (window.location.href.split("/").at(-1)) {
+      case "":
+        setComponent(<Portfolio />)
+        break
+      case "bio":
+        setComponent(<Biography />)
+        break
+      case "other":
+        setComponent(<Other />)
+        break
+      default:
+        setComponent(<Portfolio />)
     }
   }, [loaded])
 
