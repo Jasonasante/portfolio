@@ -14,7 +14,6 @@ const BottomNavBar = () => {
 
     useEffect(() => {
         if (typeof window !== 'undefined' && !hrefsToWatch.includes(window.location.href.split("/").at(-1))) {
-            console.log(window.location.href.split("/").at(-1))
             setActive("#/" + window.location.href.split("/").at(-1))
         }
     }, [window.location.href])

@@ -32,7 +32,6 @@ let groups = distributeInteger(length, 4, images).reverse()
 
 const AnimeList = () => {
     const [visible, setVisible] = useState(false)
-    console.log(groups)
     const OpenAnime = () => {
         setVisible(visible => !visible)
         document.body.style.overflowY = "hidden"

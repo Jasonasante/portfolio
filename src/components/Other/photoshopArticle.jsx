@@ -33,7 +33,6 @@ let groups = distributeInteger(length, 4, images).reverse()
 
 const PhotoshopArticle = () => {
     const [visible, setVisible] = useState(false)
-    console.log(groups)
     const OpenPhotoshop = () => {
         setVisible(visible => !visible)
         document.body.style.overflowY = "hidden"
@@ -61,9 +60,9 @@ const PhotoshopArticle = () => {
                         <div className='photoshop-gallery'>
                             <div className="photoshop-column">
                                 {
-                                    Object.entries(images).map(([_, photo], index) => {
+                                    Object.entries(images).map(([key, photo], index) => {
                                         if (index < groups[0]) {
-                                            return <img src={photo} alt='' loading="lazy" />
+                                            return <img src={photo} alt='' key={key} loading="lazy" />
                                         }
                                     }
                                     )
@@ -71,9 +70,9 @@ const PhotoshopArticle = () => {
                             </div>
                             <div className="photoshop-column">
                                 {
-                                    Object.entries(images).map(([_, photo], index) => {
+                                    Object.entries(images).map(([key, photo], index) => {
                                         if (index >= groups[0] && index < groups[0] + groups[1]) {
-                                            return <img src={photo} alt='' loading="lazy" />
+                                            return <img src={photo} alt='' key={key} loading="lazy" />
                                         }
                                     }
                                     )
@@ -81,9 +80,9 @@ const PhotoshopArticle = () => {
                             </div>
                             <div className="photoshop-column">
                                 {
-                                    Object.entries(images).map(([_, photo], index) => {
+                                    Object.entries(images).map(([key, photo], index) => {
                                         if (index >= groups[0] + groups[1] && index < groups[0] + groups[1] + groups[2]) {
-                                            return <img src={photo} alt='' loading="lazy" />
+                                            return <img src={photo} alt='' key={key} loading="lazy" />
                                         }
                                     }
                                     )
@@ -91,9 +90,9 @@ const PhotoshopArticle = () => {
                             </div>
                             <div className="photoshop-column">
                                 {
-                                    Object.entries(images).map(([_, photo], index) => {
+                                    Object.entries(images).map(([key, photo], index) => {
                                         if (index >= groups[0] + groups[1] + groups[2] && index < groups[0] + groups[1] + groups[2] + groups[3]) {
-                                            return <img src={photo} alt='' loading="lazy" />
+                                            return <img src={photo} alt='' key={key} loading="lazy" />
                                         }
                                     }
                                     )

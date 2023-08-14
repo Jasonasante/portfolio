@@ -67,7 +67,7 @@ const RecentProjects = () => {
                                         {
                                             Object.entries(project.links).map(([key, value]) => {
                                                 return (
-                                                    <a href={value} className='btn-primary' >{key}</a>
+                                                    <a href={value} className='btn-primary' key={key} >{key}</a>
                                                 );
                                             })
                                         }
