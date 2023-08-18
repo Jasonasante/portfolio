@@ -13,7 +13,7 @@ const RecentProjects = () => {
             title: "Bomberman", image: Bomberman,
             description: "A multi-player last-man standing video game where users can interact via messaging",
             languages: "JavaScript, custom mini-framework",
-            links: { "GitHub": "https://github.com/RJNA-Rangers/bomberman-dom" }
+            links: { "GitHub": "https://github.com/Jasonasante/bomberman" }
         },
         {
             title: "Social Network", image: SocialNetwork,
