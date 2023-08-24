@@ -24,7 +24,7 @@ const RecentProjects = () => {
             links: { "GitHub": "https://github.com/Jasonasante/social-network-01" }
         },
         {
-            title: "GraphQL", image: GraphQL,
+            title: "Student's GraphQL", image: GraphQL,
             description: `A web application allowing signed-in students to track their progress.`,
             languages: "JavaScript, GraphQL, HTML, CSS",
             links: { Play: "https://jasonasantegql.netlify.app" }
