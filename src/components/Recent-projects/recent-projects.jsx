@@ -6,6 +6,7 @@ import SocialNetwork from '../../assets/social-network.png'
 import RealTimeForum from '../../assets/real-time-forum.png'
 import Bomberman from '../../assets/bomberman-dom.png'
 import TodoMVC from '../../assets/todo.png'
+import GraphQL from '../../assets/GQL.png'
 
 const RecentProjects = () => {
     const projectArr = [
@@ -21,6 +22,12 @@ const RecentProjects = () => {
              likes and communicate via group or private messaging.`,
             languages: "React, Go, RESTful API, and SQLite3 Migrations",
             links: { "GitHub": "https://github.com/Jasonasante/social-network-01" }
+        },
+        {
+            title: "GraphQL", image: GraphQL,
+            description: `A web application allowing signed-in students to track their progress.`,
+            languages: "JavaScript, GraphQL, HTML, CSS",
+            links: { Play: "https://jasonasantegql.netlify.app" }
         },
         {
             title: "Mini-Framework", image: TodoMVC,
