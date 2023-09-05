@@ -3,6 +3,7 @@ import './photoshopArticle.css'
 import { SiAdobephotoshop } from 'react-icons/si'
 import { IoClose } from 'react-icons/io5'
 import { FaDeviantart, FaInstagram } from 'react-icons/fa'
+import MyImage from './image'
 
 function importAll(r) {
     let images = {};
@@ -62,7 +63,7 @@ const PhotoshopArticle = () => {
                                 {
                                     Object.entries(images).map(([key, photo], index) => {
                                         if (index < groups[0]) {
-                                            return <img src={photo} alt='' key={key} loading="lazy" />
+                                            return <><MyImage src={photo}/></>
                                         }
                                     }
                                     )
@@ -72,7 +73,7 @@ const PhotoshopArticle = () => {
                                 {
                                     Object.entries(images).map(([key, photo], index) => {
                                         if (index >= groups[0] && index < groups[0] + groups[1]) {
-                                            return <img src={photo} alt='' key={key} loading="lazy" />
+                                            return <><MyImage src={photo}/></>
                                         }
                                     }
                                     )
@@ -82,7 +83,7 @@ const PhotoshopArticle = () => {
                                 {
                                     Object.entries(images).map(([key, photo], index) => {
                                         if (index >= groups[0] + groups[1] && index < groups[0] + groups[1] + groups[2]) {
-                                            return <img src={photo} alt='' key={key} loading="lazy" />
+                                            return <><MyImage src={photo}/></>
                                         }
                                     }
                                     )
@@ -92,7 +93,7 @@ const PhotoshopArticle = () => {
                                 {
                                     Object.entries(images).map(([key, photo], index) => {
                                         if (index >= groups[0] + groups[1] + groups[2] && index < groups[0] + groups[1] + groups[2] + groups[3]) {
-                                            return <img src={photo} alt='' key={key} loading="lazy" />
+                                            return <><MyImage src={photo}/></>
                                         }
                                     }
                                     )

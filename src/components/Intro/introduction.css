@@ -4,7 +4,7 @@
 
 .introduction-div {
     display: grid;
-    grid-template-columns: 80% 20%;
+    grid-template-columns: 60% 25%;
     width: 90%;
     justify-content: center;
     align-items: center;
