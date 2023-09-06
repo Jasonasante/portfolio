@@ -5,7 +5,7 @@ import Portfolio from './pages/portfolio';
 import HeaderNavbar from './components/header-navabar/headerNavbar';
 import BottomNavBar from './components/navbar/navbar';
 import Biography from './pages/bio';
-import Projects from './pages/projects';
+// import Projects from './pages/projects';
 import Other from './pages/other';
 import { Route, Routes } from 'react-router-dom';
 

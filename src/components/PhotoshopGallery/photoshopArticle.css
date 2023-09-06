@@ -80,6 +80,7 @@
   overflow: auto;
   overflow-x: hidden;
 }
+
 .photoshop-gallery::-webkit-scrollbar {
   margin-top: 1rem;
   width: 6px;
@@ -108,7 +109,6 @@
 }
 
 .photoshop-column img {
-  margin-top: 8px;
   vertical-align: middle;
   width: 100%;
   transition: var(--transition);
@@ -151,7 +151,7 @@
   .photoshop-links a {
     margin-right: 0.5rem;
   }
-  
+
 
   .photoshop-header>h3 {
     font-size: 1rem;

@@ -1,10 +1,13 @@
 import React from "react"
 import "./headerNavbar.css"
-import { NavLink} from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 const HeaderNavbar = () => {
     return (
         <nav className="top-navbar" id="top">
+            <h2 className="title">
+                Jason's Portfolio
+            </h2>
             <div className="top-navbar-links">
                 <NavLink to="/">Portfolio</NavLink>
                 <NavLink to="/bio">Bio</NavLink>

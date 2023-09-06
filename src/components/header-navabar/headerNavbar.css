@@ -2,7 +2,7 @@
     width: 100%;
     background-color: var(--color-bg);
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     padding: 10px;
 }
@@ -30,7 +30,7 @@
     color: var(--color-white);
 }
 
-.top-navbar-links> .active {
+.top-navbar-links>.active {
     text-shadow: 3px 4px 5px transparent;
     background-color: var(--color-primary);
     border-radius: 0.5rem;
@@ -47,6 +47,11 @@
     align-items: center;
     padding: 10px;
     margin-bottom: 80px;
+}
+
+.top-navbar>.title {
+    margin-left: 4rem;
+    text-align: start;
 }
 
 @media screen and (max-width:1024px) {

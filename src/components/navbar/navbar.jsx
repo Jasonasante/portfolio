@@ -15,11 +15,11 @@ const BottomNavBar = () => {
     const location = useLocation();
 
     useEffect(() => {
-      setActive(location.pathname)
+        setActive(location.pathname)
     }, [location]);
 
     useEffect(() => {
-        if (active=="/bio" || active=="/other") {
+        if (active === "/bio" || active === "/other") {
             setDisabled(false);
         } else {
             setDisabled(true);

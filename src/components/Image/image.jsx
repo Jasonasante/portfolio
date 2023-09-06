@@ -1,28 +1,28 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useState } from 'react';
 import './image.css'
 
 
-export function MyImage({src}) {
+export function ImageWithLoader({ src, identifier }) {
     const [loading, setLoading] = useState(true);
     return (
-        <div className='photoshop-img-container' style={
+        <div className='photoshop-img-container' key={identifier} style={
             {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
                 width: "100%",
-                "aspectRatio": loading? "1/1":"",
+                "aspectRatio": loading ? "1/1" : "",
                 "marginTop": "8px",
             }
         } >
-            <img src={src} style={
+            <img src={src} alt="" style={
                 {
                     display: loading ? "none" : "block",
                     width: "100%",
                     animation: "fadeIn 0.5s",
                 }
-            }onLoad={(e)=>{setLoading(false)}} ></img>
+            } onLoad={(e) => { setLoading(false) }} ></img>
             <div className="spinner" style={{
                 display: loading ? "block" : "none",
             }} >
@@ -33,4 +33,4 @@ export function MyImage({src}) {
         </div>)
 }
 
-export default MyImage
+export default ImageWithLoader

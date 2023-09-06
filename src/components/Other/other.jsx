@@ -1,9 +1,8 @@
 import React from 'react'
 import './other.css'
-import { SiMyanimelist } from 'react-icons/si'
-import { PiTelevisionSimpleDuotone } from 'react-icons/pi'
-import PhotoshopArticle from './photoshopArticle'
-import AnimeList from './anime-list'
+// import { PiTelevisionSimpleDuotone } from 'react-icons/pi'
+import PhotoshopArticle from '../PhotoshopGallery/photoshopArticle'
+import AnimeList from '../AnimeList/anime-list'
 
 const OtherLinks = () => {
     return (
