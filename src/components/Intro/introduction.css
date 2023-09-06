@@ -21,7 +21,7 @@
     width: 100%;
 }
 
-.head-shot-container>img {
+.head-shot-container>.img-container>img {
     border-radius: 50%;
 }
 

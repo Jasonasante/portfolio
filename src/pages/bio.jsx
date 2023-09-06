@@ -3,6 +3,11 @@ import DetailsABoutMe from "../components/biography/biography";
 
 
 const Biography = () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+
     return (
         <DetailsABoutMe />
     )

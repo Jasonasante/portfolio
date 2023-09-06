@@ -28,15 +28,8 @@ const BottomNavBar = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            const bottomNavbarArr = Array.from(document.querySelectorAll(".bottom-navbar"))
             const position = window.scrollY;
-            const top = document.getElementById("top")
-
-            if (position < top.offsetTop + top.offsetHeight) {
-                bottomNavbarArr.forEach(bottomNavbar => bottomNavbar.style.display = "none")
-            } else {
-                bottomNavbarArr.forEach(bottomNavbar => bottomNavbar.style.display = "flex")
-            }
+            bottomNavbarDisplay()
             if (document.getElementById("about") !== null) {
                 const about = document.getElementById("about")
                 const experience = document.getElementById("experience")
@@ -98,6 +91,18 @@ const BottomNavBar = () => {
             </nav>
         </>
     )
+}
+
+export function bottomNavbarDisplay() {
+    const bottomNavbarArr = Array.from(document.querySelectorAll(".bottom-navbar"))
+    const position = window.scrollY;
+    const top = document.getElementById("top")
+
+    if (position < top.offsetTop + top.offsetHeight) {
+        bottomNavbarArr.forEach(bottomNavbar => bottomNavbar.style.display = "none")
+    } else {
+        bottomNavbarArr.forEach(bottomNavbar => bottomNavbar.style.display = "flex")
+    }
 }
 
 export default BottomNavBar

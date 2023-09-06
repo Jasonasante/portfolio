@@ -4,6 +4,7 @@ import { SiAdobephotoshop } from 'react-icons/si'
 import { IoClose } from 'react-icons/io5'
 import { FaDeviantart, FaInstagram } from 'react-icons/fa'
 import ImageWithLoader from '../Image/image'
+import { bottomNavbarDisplay } from '../navbar/navbar'
 
 function importAll(r) {
     let images = {};
@@ -37,18 +38,20 @@ const PhotoshopArticle = () => {
     const OpenPhotoshop = () => {
         setVisible(visible => !visible)
         document.body.style.overflowY = "hidden"
-        window.scrollTo(0, 0)
+        const bottomNavbarArr = Array.from(document.querySelectorAll(".bottom-navbar"))
+        bottomNavbarArr.forEach(bottomNavbar => bottomNavbar.style.display = "none")
     }
 
     const ClosePhotoshop = () => {
         setVisible(visible => !visible)
         document.body.style.overflowY = "auto"
+        bottomNavbarDisplay()
     }
 
     return (
         <>
             {visible &&
-                <div className="photoshop-container">
+                <div className="photoshop-container" style={{ "top": window.scrollY + "px", }}>
                     <div className="photoshop">
                         <div className='photoshop-header'>
                             <div className='photoshop-links'>

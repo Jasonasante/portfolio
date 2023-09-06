@@ -11,6 +11,7 @@ import found from '../../assets/gd/Look-what-I-found.jpg'
 import world from '../../assets/gd/look-at-the-world-around-you.jpg'
 import escape from '../../assets/gd/the-great-escape.jpg'
 import spirit from '../../assets/gd/Spirit-World.jpg'
+import ImageWithLoader from "../Image/image";
 
 const GDSlider = () => {
     return (
@@ -29,7 +30,7 @@ const GDSlider = () => {
                 modules={[Autoplay, Pagination, Navigation]}
                 className="mySwiper"
             >
-                <SwiperSlide><img src={world} alt="look at the world around you" loading="lazy" /></SwiperSlide>
+                <SwiperSlide><ImageWithLoader src={world}/></SwiperSlide>
                 <SwiperSlide><img src={twoKids} alt="two kids" loading="lazy" /></SwiperSlide>
                 <SwiperSlide><img src={vines} alt="vines" loading="lazy" /></SwiperSlide>
                 <SwiperSlide><img src={escape} alt="great escape" loading="lazy" /></SwiperSlide>

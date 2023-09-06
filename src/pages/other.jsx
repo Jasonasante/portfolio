@@ -3,6 +3,11 @@ import GDSlider from "../components/GDSlider/gdSlider";
 import OtherLinks from "../components/Other/other";
 
 const Other = () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+
     return (
         <section className="other-container">
             <h5>Get To Know</h5>

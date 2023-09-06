@@ -6,8 +6,11 @@ import Contact from "../components/Contact/contact";
 import RecentProjects from "../components/Recent-projects/recent-projects";
 
 const Portfolio = () => {
-    const bottomNavbarArr = Array.from(document.querySelectorAll(".bottom-navbar"))
-    bottomNavbarArr.forEach(bottomNavbar => bottomNavbar.style.display = "none")
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Add smooth scrolling behavior for a smooth transition
+    });
+
     return (
         <>
             <Introduction />

@@ -3,6 +3,7 @@ import './introduction.css'
 import ContactLinks from '../ContactLinks/contactLinks'
 import HeadShot from '../../assets/image-1.jpg'
 import Technologies from '../technologies/technologies'
+import ImageWithLoader from '../Image/image'
 
 
 const Introduction = () => {
@@ -17,7 +18,8 @@ const Introduction = () => {
                     <ContactLinks />
                 </div>
                 <div className='head-shot-container'>
-                    <img className='intro-img' alt="Jason Asante's Head Shot" src={HeadShot} loading='lazy' />
+                    <ImageWithLoader src={HeadShot} />
+                    {/* <img className='intro-img' alt="Jason Asante's Head Shot"  loading='lazy' /> */}
                 </div>
             </div>
         </section>
