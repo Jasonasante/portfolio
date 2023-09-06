@@ -56,7 +56,7 @@ const PhotoshopArticle = () => {
                         <div className='photoshop-header'>
                             <div className='photoshop-links'>
                                 <a href="https://www.deviantart.com/chumzycreates"><FaDeviantart /></a>
-                                <a href="https://www.deviantart.com/chumzycreates"><FaInstagram /></a>
+                                <a href="https://www.instagram.com/chumzy.creates/"><FaInstagram /></a>
                             </div>
                             <h3>Chumzy Creates</h3>
                             <button className='photoshop-close' onClick={ClosePhotoshop}><IoClose className='close-icon' /></button>

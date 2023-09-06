@@ -3,6 +3,7 @@ import './about.css'
 import AboutMe from '../../assets/aboutme.gif'
 import { GiDiploma, GiNetworkBars } from 'react-icons/gi'
 import { FaAward } from 'react-icons/fa'
+import ImageWithLoader from '../Image/image'
 
 const About = () => {
     return (
@@ -12,7 +13,7 @@ const About = () => {
             <div className='container about-container'>
                 <div className='about-me'>
                     <div className="about-me-image">
-                        <img src={AboutMe} alt="about me" loading='lazy' />
+                        <ImageWithLoader src={AboutMe} />
                     </div>
 
                 </div>

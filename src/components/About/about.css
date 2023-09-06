@@ -31,6 +31,10 @@
     transform: rotate(-10deg);
 }
 
+.about-me-image>.img-container {
+    height: 100%;
+}
+
 .about-me-image:hover {
     transform: rotate(0deg);
     transition: var(--transition);
@@ -115,7 +119,8 @@
     .about-me-card>h5 {
         font-size: x-small;
     }
-    .about-me-card> small {
+
+    .about-me-card>small {
         font-size: xx-small;
     }
 

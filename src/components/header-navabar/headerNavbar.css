@@ -55,21 +55,23 @@
 }
 
 @media screen and (max-width:1024px) {
-    .top-navbar-links {
-        width: 60%;
-    }
 
     .top-navbar-links>a {
-        font-size: small;
+        font-size: medium;
     }
 }
 
 @media screen and (max-width:600px) {
     .top-navbar-links {
-        width: 100%;
+        width: 60%;
+    }
+
+    .top-navbar .title {
+        margin: 0;
+        font-size: medium;
     }
 
     .top-navbar-links>a {
-        font-size: x-small;
+        font-size: small;
     }
 }
