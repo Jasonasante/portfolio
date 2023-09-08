@@ -80,24 +80,6 @@
   overflow-x: hidden;
 }
 
-.photoshop-gallery::-webkit-scrollbar {
-  margin-top: 1rem;
-  width: 6px;
-}
-
-.photoshop-gallery::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.photoshop-gallery::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background: var(--color-primary)
-}
-
-.photoshop-gallery::-webkit-scrollbar-thumb:hover {
-  background: var(--color-primary-variant);
-}
-
 /* Create four equal columns that sits next to each other */
 .photoshop-column {
   -ms-flex: 25%;
@@ -107,7 +89,7 @@
   padding: 0 4px;
 }
 
-.photoshop-column .img-container{
+.photoshop-column .img-container {
   margin-top: 0.5rem;
 }
 

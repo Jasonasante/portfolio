@@ -4,6 +4,7 @@ import AboutMe from '../../assets/aboutme.gif'
 import { GiDiploma, GiNetworkBars } from 'react-icons/gi'
 import { FaAward } from 'react-icons/fa'
 import ImageWithLoader from '../Image/image'
+import { NavLink } from 'react-router-dom'
 
 const About = () => {
     return (
@@ -40,7 +41,7 @@ const About = () => {
                 </div>
             </div>
             <div className='learn-more'>
-                <a href="#/bio" className='btn-primary'>Learn more...</a>
+                <NavLink to="/bio" className='btn-primary'>Learn more...</NavLink>
             </div>
         </section>
     )

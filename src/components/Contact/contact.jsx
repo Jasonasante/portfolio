@@ -20,17 +20,17 @@ const Contact = () => {
                     <article className="contact-option">
                         <AiOutlineMail className="contact-icon" />
                         <p>Email</p>
-                        <a href='mailto:jason.asante@outlook.com' className="text-light">jason.asante@outlook.com</a>
+                        <a href='mailto:jason.asante@outlook.com' target="_blank" className="text-light">jason.asante@outlook.com</a>
                     </article>
                     <article className="contact-option">
                         <AiFillLinkedin className="contact-icon" />
                         <p>LinkedIn</p>
-                        <a href="https://www.linkedin.com/in/jason-asante/" className="text-light">Click Here</a>
+                        <a href="https://www.linkedin.com/in/jason-asante/" target="_blank" className="text-light">Click Here</a>
                     </article>
                     <article className="contact-option">
                         <AiOutlineWhatsApp className="contact-icon" />
                         <p>Phone</p>
-                        <a href='https://api.whatsapp.com/send?phone=+447802512920' className="text-light">07802512920</a>
+                        <a href='https://api.whatsapp.com/send?phone=+447802512920' target="_blank" className="text-light">07802512920</a>
                     </article>
                 </div>
                 <form className="contact-form" ref={form} onSubmit={sendEmail}>
