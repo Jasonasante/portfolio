@@ -74,7 +74,7 @@ const Experience = () => {
                         <article className='experience-card'>
                             <LuVerified className="experience-icon" />
                             <div>
-                                <h4>Visual Studio Code</h4>
+                                <h4>Photoshop</h4>
                                 <small className='text-light'>Experienced</small>
                             </div>
                         </article>
@@ -82,20 +82,20 @@ const Experience = () => {
                             <LuVerified className="experience-icon" />
                             <div>
                                 <h4>Linux</h4>
-                                <small className='text-light'>Experienced</small>
+                                <small className='text-light'>Intermediate</small>
                             </div>
                         </article>
                         <article className='experience-card'>
                             <LuVerified className="experience-icon" />
                             <div>
                                 <h4>Git</h4>
-                                <small className='text-light'>Experienced</small>
+                                <small className='text-light'>Intermediate</small>
                             </div>
                         </article>
                         <article className='experience-card'>
                             <LuVerified className="experience-icon" />
                             <div>
-                                <h4>Restful Api</h4>
+                                <h4>RESTful API</h4>
                                 <small className='text-light'>Intemediate</small>
                             </div>
                         </article>
