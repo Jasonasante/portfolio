@@ -30,12 +30,12 @@ const GDSlider = () => {
                 modules={[Autoplay, Pagination, Navigation]}
                 className="mySwiper"
             >
-                <SwiperSlide><ImageWithLoader src={world}/></SwiperSlide>
-                <SwiperSlide><img src={twoKids} alt="two kids" loading="lazy" /></SwiperSlide>
-                <SwiperSlide><img src={vines} alt="vines" loading="lazy" /></SwiperSlide>
-                <SwiperSlide><img src={escape} alt="great escape" loading="lazy" /></SwiperSlide>
-                <SwiperSlide><img src={found} alt="look what i found" loading="lazy" /></SwiperSlide>
-                <SwiperSlide><img src={spirit} alt="spirit world" loading="lazy" /></SwiperSlide>
+                <SwiperSlide><ImageWithLoader src={world} /></SwiperSlide>
+                <SwiperSlide><ImageWithLoader src={twoKids} /></SwiperSlide>
+                <SwiperSlide><ImageWithLoader src={vines} /></SwiperSlide>
+                <SwiperSlide><ImageWithLoader src={escape} /></SwiperSlide>
+                <SwiperSlide><ImageWithLoader src={found} /></SwiperSlide>
+                <SwiperSlide><ImageWithLoader src={spirit} /></SwiperSlide>
             </Swiper>
         </div>
     )
