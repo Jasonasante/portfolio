@@ -83,10 +83,9 @@
 }
 
 .learn-more {
-    width: 90%;
-    left: 50%;
-    transform: translateX(50%);
     margin-top: 4rem;
+    display: flex;
+    justify-content: center;
 }
 
 .learn-more>a {
